@@ -6,7 +6,7 @@ links:
     url: https://github.com/pegah-kh/kinematic_adversary_agents
   - text: Report
     url: https://github.com/pegah-kh/kinematic_adversary_agents/blob/main/report.pdf
-image: ../images/induced_collisions.png
+image: /images/induced_collisions.png
 ---
 
 

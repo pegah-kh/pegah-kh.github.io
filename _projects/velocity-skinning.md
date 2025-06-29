@@ -6,7 +6,7 @@ links:
     url: https://github.com/pegah-kh/Simple-Velocity-Skinning
   - text: Report
     url: https://github.com/pegah-kh/Simple-Velocity-Skinning/tree/master/report_and_demonstration
-image: ../images//ezgif.com-gif-maker.gif
+image: /images//ezgif.com-gif-maker.gif
 ---
 
 This was a course project that I truly enjoyed. It's about making animation looking more realistic and loose, by adding exagerated deformation triggered by skeletal velocity on top of standard skinning animation.

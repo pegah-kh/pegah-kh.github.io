@@ -29,8 +29,9 @@ permalink: /projects/
 {{ project.excerpt }}
 
 {% if project.image %}
-<img src="{{ project.image }}" width="400">
+  <img src="{{ project.image }}" alt="{{ project.title }}" width="400">
 {% endif %}
+
 
 <hr>
 {% endfor %}
