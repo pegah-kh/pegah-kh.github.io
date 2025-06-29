@@ -9,4 +9,4 @@ links:
 This is a simple plugin of [OpenPifPaf](https://openpifpaf.github.io/intro.html) for detecting landmarks (main points of interest such as the end of sleeves in a shirt ...) in various clothing items.
 
 
-<img src="../images/clothing_landmark.gif" alt="Alt Text" width="250">
+<img src="/images/clothing_landmark.gif" alt="Alt Text" width="250">
