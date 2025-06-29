@@ -17,14 +17,20 @@ layout: default
 title: Projects
 permalink: /projects/
 ---
-
 {% for project in site.projects %}
 ### [{{ project.title }}]({{ project.url }})
+
+{% if project.links %}
 {% for link in project.links %}
 [{{ link.text }}]({{ link.url }}),
 {% endfor %}
+{% endif %}
 
 {{ project.excerpt }}
 
+{% if project.image %}
 <img src="{{ project.image }}" width="400">
+{% endif %}
+
+<hr>
 {% endfor %}
