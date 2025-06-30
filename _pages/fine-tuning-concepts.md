@@ -57,7 +57,7 @@ Multimodal LLMs (MLLMs) have reached remarkable levels of proficiency in underst
 
 Given a pretrained LMM for captioning and a target token (e.g., "Person"), we use the concept extraction method introduced in "A Concept-Based Explainability Framework
 for Large Multimodal Models" ([paper page](https://jayneelparekh.github.io/LMM_Concept_Explainability/)) to study the shift of semantics due to fine-tuning. More specifically, we first extract concepts related to a specific token from the original and the fine-tuned models, and then try to understand how the original concepts have been shifted. 
-
+{% raw %}
 Let's say \(\mathbf{U}^a, \mathbf{U}^b \in \mathbb{R}^{D \times K}\) are \(K\) concepts extracted from each model. We propose to characterize the concept changes from an original to fine-tuned model as linear directions in embedding space or *concept shift vectors*.
 To do so, we first associate each original concept \(\mathbf{u}^a_k \in \mathbf{U}^a\) with a subset of samples where $\mathbf{u}^a_k$ is the most activated concept:
 $$
@@ -74,6 +74,7 @@ The concept shift vector is used to shift each concept in the original model \(\
 $$
 \mathbf{u}^s_k = \mathbf{u}^a_k + \alpha \cdot \mathbf{\Delta}_k^{a \to b}(\mathbf{u}^a_k),
 $$
+{% endraw %}
 
 It is worth noting that given the concept shift vectors, the computation of shifted concepts does not rely on accessing the fine-tuned model.
 
