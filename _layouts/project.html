@@ -96,9 +96,16 @@
 
   <div class="authors">
     {% for author in page.authors %}
-      <span>{{ author }}</span>
+      <span>
+        {% if author.url %}
+          <a href="{{ author.url }}" style="color:#c00; text-decoration: none;">{{ author.name }}</a>
+        {% else %}
+          {{ author.name }}
+        {% endif %}
+      </span>
     {% endfor %}
   </div>
+  
 
   <div class="affiliation">{{ page.affiliation }}</div>
 
