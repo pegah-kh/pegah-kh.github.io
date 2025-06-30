@@ -1,4 +1,20 @@
 ---
+title: "A Concept-Based Explainability Framework for Large Multimodal Models"
+layout: project
+permalink: /projects/lmm-explainability/
+authors:
+  - Jayneel Parekh
+  - Pegah Khayatan
+  - Mustafa Shukor
+  - Alasdair Newson
+  - Matthieu Cord
+affiliation: ISIR, Sorbonne Université, France
+paper_url: https://arxiv.org/abs/2406.08074
+code_url: https://github.com/mshukor/xl-vlms
+---
+
+
+<!-- ---
 title: "A Concept-Based Explainability Framework for Large Multimodal Models for Large Multimodal Models"
 layout: project
 permalink: /projects/lmm-explainability/
@@ -7,7 +23,7 @@ affiliation: ISIR, Sorbonne Université, France
 paper_url: https://arxiv.org/abs/2406.08074
 code_url: https://github.com/mshukor/xl-vlms
 # method_image: /assets/images/lmm-method.png
----
+--- -->
 
 <!-- ---
 title: "A Concept-Based Explainability Framework for Large Multimodal Models"
