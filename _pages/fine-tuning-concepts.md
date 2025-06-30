@@ -77,8 +77,9 @@ $$
 
 It is worth noting that given the concept shift vectors, the computation of shifted concepts does not rely on accessing the fine-tuned model.
 
+![Codebook Image](../images/analyze_shift.png)
 
-<img src="../images/analyze_shift.png" alt="Codebook Image" width="400"/>
+<!-- <img src="../images/analyze_shift.png" alt="Codebook Image" width="400"/> -->
 
 ---
 
