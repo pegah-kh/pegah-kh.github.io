@@ -1,8 +1,19 @@
 ---
+title: "A Concept-Based Explainability Framework for Large Multimodal Models for Large Multimodal Models"
+layout: project
+permalink: /projects/lmm-explainability/
+authors: Jayneel Parekh, Pegah Khayatan, Mustafa Shukor, Alasdair Newson, Matthieu Cord
+affiliation: ISIR, Sorbonne Université, France
+paper_url: https://arxiv.org/abs/2406.08074
+code_url: https://github.com/mshukor/xl-vlms
+# method_image: /assets/images/lmm-method.png
+---
+
+<!-- ---
 title: "A Concept-Based Explainability Framework for Large Multimodal Models"
 permalink: /projects/lmm-explainability/
 layout: default
----
+--- -->
 
 <script type="text/javascript" src="https://www.maths.nottingham.ac.uk/plp/pmadw/LaTeXMathML.js"></script>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
@@ -80,3 +91,4 @@ We evaluate the framework using DePALM with ViT-L/14 + OPT-6.7B...
 ### Understanding test representations
 
 <!-- ![Test Understanding](images/local_intp_fig_v2.jpg) -->
+

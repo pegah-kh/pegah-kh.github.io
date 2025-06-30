@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ page.title }}</title>
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      max-width: 900px;
+      margin: auto;
+      padding: 2em;
+      line-height: 1.6;
+    }
+    h1, h2 {
+      text-align: center;
+    }
+    .authors {
+      text-align: center;
+      color: #b00;
+      margin-bottom: 1em;
+    }
+    .links {
+      text-align: center;
+      margin: 1em 0;
+    }
+    .abstract {
+      font-size: 1.1em;
+      border-top: 1px solid #ccc;
+      border-bottom: 1px solid #ccc;
+      padding: 1em 0;
+    }
+    .section {
+      margin-top: 2em;
+    }
+    .center {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h1>{{ page.title }}</h1>
+  <h2>{{ page.subtitle }}</h2>
+
+  <div class="authors">
+    {{ page.authors }}
+    <div>{{ page.affiliation }}</div>
+  </div>
+
+  <div class="links">
+    {% if page.paper_url %}<a href="{{ page.paper_url }}">[Paper]</a>{% endif %}
+    {% if page.code_url %} <a href="{{ page.code_url }}">[Code]</a>{% endif %}
+  </div>
+
+  <div class="abstract section">
+    <h2>Abstract</h2>
+    {{ content }}
+  </div>
+
+  {% if page.method_image %}
+  <div class="section center">
+    <h2>Method</h2>
+    <img src="{{ page.method_image | relative_url }}" alt="Method" style="max-width: 100%;">
+  </div>
+  {% endif %}
+</body>
+</html>
