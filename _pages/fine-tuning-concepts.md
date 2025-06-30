@@ -3,11 +3,11 @@ title: "A Concept-Based Explainability Framework for Large Multimodal Models"
 layout: project
 permalink: /projects/lmm-explainability/
 authors:
-  - Jayneel Parekh
-  - Pegah Khayatan
-  - Mustafa Shukor
-  - Alasdair Newson
-  - Matthieu Cord
+  - [Jayneel Parekh](https://jayneelparekh.github.io/)
+  - [Pegah Khayatan](https://pegah-kh.github.io/)
+  - [Mustafa Shukor](https://geogroup.ai/author/mustafa-shukor/)
+  - [Alasdair Newson](https://sites.google.com/site/alasdairnewson/)
+  - [Matthieu Cord](https://cord.isir.upmc.fr/) 
 affiliation: ISIR, Sorbonne Université, France
 paper_url: https://arxiv.org/abs/2406.08074
 code_url: https://github.com/mshukor/xl-vlms
@@ -31,26 +31,11 @@ permalink: /projects/lmm-explainability/
 layout: default
 --- -->
 
-<script type="text/javascript" src="https://www.maths.nottingham.ac.uk/plp/pmadw/LaTeXMathML.js"></script>
+<!-- <script type="text/javascript" src="https://www.maths.nottingham.ac.uk/plp/pmadw/LaTeXMathML.js"></script>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script id="MathJax-script" async
-        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script> -->
 
-# A Concept-Based Explainability Framework for Large Multimodal Models
-
-### Authors
-
-[Jayneel Parekh](https://jayneelparekh.github.io/)  
-[Pegah Khayatan](https://pegah-kh.github.io/)  
-[Mustafa Shukor](https://geogroup.ai/author/mustafa-shukor/)  
-[Alasdair Newson](https://sites.google.com/site/alasdairnewson/)  
-[Matthieu Cord](https://cord.isir.upmc.fr/)  
-
-**Affiliation**: ISIR, Sorbonne Université, France
-
-**Links**:  
-[Paper (arXiv)](https://arxiv.org/abs/2406.08074)  
-[Code (GitHub)](https://github.com/mshukor/xl-vlms)
 
 ---
 
