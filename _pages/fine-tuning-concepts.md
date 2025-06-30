@@ -9,9 +9,13 @@ authors:
   - name: Pegah Khayatan
     url: https://pegah-kh.github.io/
   - name: Mustafa Shukor
-    url: https://scholar.google.com/citations?hl=en&user=lhp9mRgAAAAJ&view_op=list_works&sortby=pubdate
+    url: https://jayneelparekh.github.io/
+
+    # url: https://scholar.google.com/citations?hl=en&user=lhp9mRgAAAAJ&view_op=list_works&sortby=pubdate
   - name: Arnaud Dapogny
-    url: https://scholar.google.fr/citations?user=2HDcyrUAAAAJ&hl=fr
+    url: https://jayneelparekh.github.io/
+
+    # url: https://scholar.google.fr/citations?user=2HDcyrUAAAAJ&hl=fr
   - name: Matthieu Cord
     url: https://cord.isir.upmc.fr/
 affiliation: ISIR, Sorbonne Université, France
