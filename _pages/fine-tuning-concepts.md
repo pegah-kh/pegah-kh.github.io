@@ -9,13 +9,9 @@ authors:
   - name: Pegah Khayatan
     url: https://pegah-kh.github.io/
   - name: Mustafa Shukor
-    url: https://jayneelparekh.github.io/
-
-    # url: https://scholar.google.com/citations?hl=en&user=lhp9mRgAAAAJ&view_op=list_works&sortby=pubdate
+    url: https://scholar.google.com/citations?hl=en&user=lhp9mRgAAAAJ&view_op=list_works&sortby=pubdate
   - name: Arnaud Dapogny
-    url: https://jayneelparekh.github.io/
-
-    # url: https://scholar.google.fr/citations?user=2HDcyrUAAAAJ&hl=fr
+    url: https://scholar.google.fr/citations?user=2HDcyrUAAAAJ&hl=fr
   - name: Matthieu Cord
     url: https://cord.isir.upmc.fr/
 affiliation: ISIR, Sorbonne Université, France
@@ -58,9 +54,9 @@ Multimodal LLMs (MLLMs) have reached remarkable levels of proficiency in underst
 ## Method
 
 <!-- ![System Figure](images/sys_fig_v4.jpg) -->
-
+<!-- 
 Given a pretrained LMM for captioning and a target token (e.g., "Person"), we use the concept extraction method introduced in "A Concept-Based Explainability Framework
-for Large Multimodal Models" ([paper page](https://jayneelparekh.github.io/LMM_Concept_Explainability/)) to study the shift of semantics due to fine-tuning. More specifically, we first extract concepts related to a specific token from the original and the fine-tuned models, and then try to understand how the original concepts have been shifted. 
+for Large Multimodal Models" ([paper page](https://jayneelparekh.github.io/LMM_Concept_Explainability/)) to study the shift of semantics due to fine-tuning. More specifically, we first extract concepts related to a specific token from the original and the fine-tuned models, and then try to understand how the original concepts have been shifted.  -->
 <!-- 
 Let's say $\mathbf{U}^a, \mathbf{U}^b \in \mathbb{R}^{D \times K}$ are $K$ concepts extracted from each model. We propose to characterize the concept changes from an original to fine-tuned model as linear directions in embedding space or *concept shift vectors*.
 To do so, we first associate each original concept $\mathbf{u}^a_k \in \mathbf{U}^a$ with a subset of samples where $\mathbf{u}^a_k$ is the most activated concept:
