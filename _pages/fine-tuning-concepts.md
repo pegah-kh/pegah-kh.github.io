@@ -1,5 +1,6 @@
 ---
-title: "A Concept-Based Explainability Framework for Large Multimodal Models"
+title: "Analyzing Fine-tuning Representation Shift for Multimodal LLMs Steering"
+subtitle: "ICCV 2025"
 layout: project
 permalink: /projects/lmm-explainability/
 authors:
@@ -36,19 +37,17 @@ permalink: /projects/lmm-explainability/
 layout: default
 --- -->
 
-<script type="text/javascript" src="https://www.maths.nottingham.ac.uk/plp/pmadw/LaTeXMathML.js"></script>
+<!-- <script type="text/javascript" src="https://www.maths.nottingham.ac.uk/plp/pmadw/LaTeXMathML.js"></script>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script id="MathJax-script" async
-        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script> -->
 
 
 ---
 
 ## Abstract
 
-Large multimodal models (LMMs) combine unimodal encoders and large language models (LLMs) to perform multimodal tasks...
-
-(continue rest of abstract here)
+Multimodal LLMs (MLLMs) have reached remarkable levels of proficiency in understanding multimodal inputs. However, understanding and interpreting the behavior of such complex models is a challenging task, not to mention the dynamic shifts that may occur during fine-tuning, or due to covariate shift between datasets. In this work, we apply concept-level analysis towards MLLM understanding. More specifically, we propose to map hidden states to interpretable visual and textual concepts. This enables us to more efficiently compare certain semantic dynamics, such as the shift from an original and fine-tuned model, revealing concept alteration and potential biases that may occur during fine-tuning. We also demonstrate the use of shift vectors to capture these concepts changes. These shift vectors allow us to recover fine-tuned concepts by applying simple, computationally inexpensive additive concept shifts in the original model. Finally, our findings also have direct applications for MLLM steering, which can be used for model debiasing as well as enforcing safety in MLLM output. All in all, we propose a novel, training-free, ready-to-use framework for MLLM behavior interpretability and control. Code will be released publicly to facilitate reproducibility and future research.
 
 ---
 
