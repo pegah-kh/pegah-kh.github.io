@@ -133,10 +133,11 @@
 
 
   <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      MathJax.typesetPromise();
+    document.addEventListener("DOMContentLoaded", () => {
+      if (window.MathJax) MathJax.typesetPromise();
     });
   </script>
+  
 
 </body>
 </html>
