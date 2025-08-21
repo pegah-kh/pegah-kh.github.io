@@ -11,4 +11,4 @@ redirect_from:
 
 My current research interests include multimodality in vision-language models (VLMs), explainability, and efficient methods to influence and adapt these models.
 
-Outside of work, I enjoy climbing, hiking, skating, drawing cute, meaningless things just for fun, watching fantasy series and baking cookies.
+Outside of work, I enjoy climbing, hiking, skating, drawing cute, meaningless things just for fun, and watching fantasy series.
