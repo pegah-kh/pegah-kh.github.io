@@ -57,29 +57,46 @@ Despite impressive progress in capabilities of large vision-language models (LVL
 
 ![Codebook Image](../images/prompt_override_1.png){: width="900" }
 
-As visual backbones improve, hallucinations increasingly arise from *conflicts between language priors and visual information*, rather than from perceptual limitations alone. However, existing evaluation benchmarks including POPE, CHAIR, SHR, and MMHAL-Bench do not distinguish between hallucinations originating from perception failures, learned object co-occurrence priors, or presuppositions introduced by the instruction itself.
+Hallucinations in LVLMs increasingly arise from *conflicts between language priors and visual information*, rather than from perceptual limitations alone. However, existing evaluation benchmarks including POPE, CHAIR, SHR, and MMHAL-Bench do not distinguish between hallucinations originating from perception failures, learned object co-occurrence priors, or presuppositions introduced by the instruction itself.
 
-We introduce **HalluScope** <img src="/images/prompt_override_2.png" alt="HalluScope Logo" style="display:inline; vertical-align:middle; height:40px; margin-left:6px;">, a benchmark designed to disentangle distinct causes of hallucination: perception failures, learned object co-occurrence priors, and presuppositions introduced by the instruction. Using HalluScope, we show that hallucinations in modern LVLMs predominantly arise from over-reliance on textual instruction presuppositions and learned semantic priors rather than limitations of visual perception, revealing a shift in failure modes as visual backbones improve.
+We introduce **HalluScope** <img src="/images/prompt_override_2.png" alt="HalluScope Logo" style="display:inline; vertical-align:middle; height:40px; margin-left:6px;">, a benchmark designed to disentangle distinct causes of hallucination:
 
-Each image in our benchmark is paired with three targeted questions. Our construction pipeline proceeds as follows:
+<div style="display: flex; gap: 16px; margin: 20px 0;">
 
-🖼️ **A. Image Sampling** — Diverse samples are drawn from a source image collection
+<div style="flex: 1; border: 1px solid #ddd; border-radius: 10px; padding: 16px; text-align: center;">
+👁️<br><strong>Perception Failures</strong><br><small>Can the model correctly see what is in the image?</small>
+</div>
 
-🔍 **B. Object Detection** — Objects are detected and localized in each image
+<div style="flex: 1; border: 1px solid #ddd; border-radius: 10px; padding: 16px; text-align: center;">
+🔗<br><strong>Co-occurrence Priors</strong><br><small>Does the model hallucinate statistically likely but absent objects?</small>
+</div>
 
-🕸️ **C.** An object co-occurrence graph is built to surface context-aware adversarial objects — plausible but absent from the image
+<div style="flex: 1; border: 1px solid #ddd; border-radius: 10px; padding: 16px; text-align: center;">
+💬<br><strong>Instruction Presuppositions</strong><br><small>Does the model follow false assumptions introduced by the prompt?</small>
+</div>
 
-❓ **D. Question Generation** — Three targeted questions are crafted per image, probing:
-- 👁️ *Visual perception*
-- 🔗 *Reliance on learned co-occurrence patterns*
-- 💬 *Sensitivity to presuppositions in the textual instruction*
+</div>
+
+![Benchmark overview](../images/prompt_override_3.png){: width="900" }
+*Overview of the HalluScope benchmark construction pipeline.*
+
+Using HalluScope, we show that hallucinations in modern LVLMs predominantly arise from **over-reliance on textual instruction presuppositions** and **learned semantic priors** rather than limitations of visual perception, revealing a shift in failure modes as visual backbones improve.
+
+
+<!-- 
+Hallucinations in LVLMs increasingly arise from *conflicts between language priors and visual information*, rather than from perceptual limitations alone. However, existing evaluation benchmarks including POPE, CHAIR, SHR, and MMHAL-Bench do not distinguish between hallucinations originating from perception failures, learned object co-occurrence priors, or presuppositions introduced by the instruction itself.
+
+We introduce **HalluScope** <img src="/images/prompt_override_2.png" alt="HalluScope Logo" style="display:inline; vertical-align:middle; height:40px; margin-left:6px;">, a benchmark designed to disentangle distinct causes of hallucination: perception failures, learned object co-occurrence priors, and presuppositions introduced by the instruction. 
+- 👁️ *perception failures*
+- 🔗 *learned object co-occurrence priors*
+- 💬 *presuppositions introduced by the instruction*
 
 ![Benchmark overview](../images/prompt_override_3.png){: width="900" }
 
+Using HalluScope, we show that hallucinations in modern LVLMs predominantly arise from **over-reliance on textual instruction presuppositions** and **learned semantic priors** rather than limitations of visual perception, revealing a shift in failure modes as visual backbones improve. -->
 
 
-
-### Our key insights ✨
+<!-- ### Our key insights ✨
 
 We evaluated several MLLMs on our benchmark.
 
@@ -87,7 +104,7 @@ We evaluated several MLLMs on our benchmark.
 
 🕸️ **Learned co-occurrence priors drive hallucinations.** Adversarial recognition accuracy drops by 8–37% compared to standard recognition, revealing that models hallucinate objects that are statistically likely to co-occur, even when absent from the image.
 
-💬 **Textual instruction priors are the dominant failure mode.** When the prompt presupposes the presence of an adversarial object, performance drops by 25–85% relative to standard recognition — and at least 15% more than the co-occurrence setting alone — making instruction-introduced priors the single strongest driver of hallucinations.
+💬 **Textual instruction priors are the dominant failure mode.** When the prompt presupposes the presence of an adversarial object, performance drops by 25–85% relative to standard recognition — and at least 15% more than the co-occurrence setting alone — making instruction-introduced priors the single strongest driver of hallucinations. -->
 
 ---
 
@@ -104,7 +121,7 @@ To mitigate hallucinations, particularly those driven by over-reliance on textua
 
 
 <figure>
-  <img src="../images/prompt_override_4.png" width="900">
+  <img src="../images/prompt_override_5.png" width="900">
   <figcaption>Sample-specific weighting based on semantic gap.</figcaption>
 </figure>
 <!-- 
