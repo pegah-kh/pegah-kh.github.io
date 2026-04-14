@@ -69,8 +69,6 @@ Each image in our benchmark is paired with three targeted questions. Our constru
 
 ![Benchmark overview](../images/prompt_override_3.png){: width="600" }
 
-{% endraw %}
-
 
 
 <!-- 
