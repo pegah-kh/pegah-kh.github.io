@@ -49,7 +49,7 @@ layout: default
 
 ## Abstract
 
-Despite impressive progress in capabilities of large vision-language models (LVLMs), these systems remain vulnerable to hallucinations, i.e., outputs that are not grounded in the visual input. Prior work has attributed hallucinations in LVLMs to factors such as limitations of the vision backbone or the dominance of the language component, yet the relative importance of these factors remains unclear. To resolve this ambiguity, We propose HalluScope, a benchmark to better understand the extent to which different factors induce hallucinations. Our analysis indicates that hallucinations largely stem from excessive reliance on textual priors and background knowledge, especially information introduced through textual instructions. To mitigate hallucinations induced by textual instruction priors, we propose HalluVL-DPO, a framework for fine-tuning off-the-shelf LVLMs towards more visually grounded responses. HalluVL-DPO leverages preference optimization using a curated training dataset that we construct, guiding the model to prefer grounded responses over hallucinated ones. We demonstrate that our optimized model effectively mitigates the targeted hallucination failure mode, while preserving or improving performance on other hallucination benchmarks and visual capability evaluations. 
+Despite impressive progress in capabilities of large vision-language models (LVLMs), these systems remain vulnerable to hallucinations, i.e., outputs that are not grounded in the visual input. Prior work has attributed hallucinations in LVLMs to factors such as limitations of the vision backbone or the dominance of the language component, yet the relative importance of these factors remains unclear. To resolve this ambiguity, We propose **HalluScope**, a benchmark to better understand the extent to which different factors induce hallucinations. Our analysis indicates that hallucinations largely stem from excessive reliance on textual priors and background knowledge, especially information introduced through textual instructions. To mitigate hallucinations induced by textual instruction priors, we propose **HalluVL-DPO**, a framework for fine-tuning off-the-shelf LVLMs towards more visually grounded responses. HalluVL-DPO leverages preference optimization using a curated training dataset that we construct, guiding the model to prefer grounded responses over hallucinated ones. We demonstrate that our optimized model effectively mitigates the targeted hallucination failure mode, while preserving or improving performance on other hallucination benchmarks and visual capability evaluations. 
 
 ---
 
@@ -59,39 +59,55 @@ Despite impressive progress in capabilities of large vision-language models (LVL
 
 As visual backbones improve, hallucinations increasingly arise from *conflicts between language priors and visual information*, rather than from perceptual limitations alone. However, existing evaluation benchmarks including POPE, CHAIR, SHR, and MMHAL-Bench do not distinguish between hallucinations originating from perception failures, learned object co-occurrence priors, or presuppositions introduced by the instruction itself.
 
-We introduce **HalluScope** <img src="/images/prompt_override_2.png" alt="HalluScope Logo" style="display:inline; vertical-align:middle; height:40px; margin-left:6px;"> — a benchmark designed to disentangle distinct causes of hallucination: perception failures, learned object co-occurrence priors, and presuppositions introduced by the instruction. Using HalluScope, we show that hallucinations in modern LVLMs predominantly arise from over-reliance on textual instruction presuppositions and learned semantic priors rather than limitations of visual perception, revealing a shift in failure modes as visual backbones improve.
+We introduce **HalluScope** <img src="/images/prompt_override_2.png" alt="HalluScope Logo" style="display:inline; vertical-align:middle; height:40px; margin-left:6px;">, a benchmark designed to disentangle distinct causes of hallucination: perception failures, learned object co-occurrence priors, and presuppositions introduced by the instruction. Using HalluScope, we show that hallucinations in modern LVLMs predominantly arise from over-reliance on textual instruction presuppositions and learned semantic priors rather than limitations of visual perception, revealing a shift in failure modes as visual backbones improve.
 
 Each image in our benchmark is paired with three targeted questions. Our construction pipeline proceeds as follows:
 
-1. Diverse samples are drawn from a source image collection
-2. Objects are detected in each image
-3. An object co-occurrence graph is built to identify context-aware adversarial objects
-4. Three questions are generated per image, probing visual perception, reliance on learned co-occurrence patterns, and sensitivity to presuppositions in the textual instruction
+🖼️ **A. Image Sampling** — Diverse samples are drawn from a source image collection
+
+🔍 **B. Object Detection** — Objects are detected and localized in each image
+
+🕸️ **C.** An object co-occurrence graph is built to surface context-aware adversarial objects — plausible but absent from the image
+
+❓ **D. Question Generation** — Three targeted questions are crafted per image, probing:
+- 👁️ *Visual perception*
+- 🔗 *Reliance on learned co-occurrence patterns*
+- 💬 *Sensitivity to presuppositions in the textual instruction*
 
 ![Benchmark overview](../images/prompt_override_3.png){: width="900" }
 
 
 
-<!-- 
 
 ### Our key insights ✨
 
-1. **Different concept dynamics**  
-   After fine-tuning, concepts from the original model don’t all behave the same way. Some become more specialized, others expand to include new elements related to fine-tuning, and a few vanish altogether — revealing the rich dynamics of concept evolution (*Figure 5*).
+We evaluated several MLLMs on our benchmark.
 
-2. **Recovering the fine-tuned concepts 🔍**  
-   We show it’s possible to reconstruct concepts from the fine-tuned model by simply applying shift vectors. With straightforward per-concept shifts derived from samples of both models, we can effectively “recover” how concepts have adapted (*Figure 6*).
+🎯 **Visual backbones are not the bottleneck.** Across all models, recognition accuracy stays consistently above 85% for both present and random absent objects — confirming that modern visual backbones are generally reliable.
 
-3. **Aligned shifts = better recovery 🎯**  
-   There’s a positive correlation between *shift consistency* — whether all shift vectors for a concept move in the same direction — and *concept recovery* — how closely the shifted original concept matches the fine-tuned one (*Figure 7*). 
+🕸️ **Learned co-occurrence priors drive hallucinations.** Adversarial recognition accuracy drops by 8–37% compared to standard recognition, revealing that models hallucinate objects that are statistically likely to co-occur, even when absent from the image.
 
-<!-- ![Codebook Image](../images/concept_analysis.png){: width="800" } -->
-
+💬 **Textual instruction priors are the dominant failure mode.** When the prompt presupposes the presence of an adversarial object, performance drops by 25–85% relative to standard recognition — and at least 15% more than the co-occurrence setting alone — making instruction-introduced priors the single strongest driver of hallucinations.
 
 ---
 
-## Concept evolution across datasets and applications to model steering
+## Mitigating hallucinations with HalluVL-DPO
 
+
+
+To mitigate hallucinations, particularly those driven by over-reliance on textual instruction presuppositions, we propose **HalluVL-DPO**, a fine-tuning framework based on a sample-informativeness weighted variant of Direct Preference Optimization (DPO). We construct a dedicated training dataset where each sample is paired with a **preferred** (visually grounded) response and a **rejected** (hallucinated) one, providing explicit supervision to steer the model toward more grounded outputs.
+
+<figure>
+  <img src="../images/prompt_override_4.png" width="900">
+  <figcaption>Sample instances from the HalluVL-DPO training dataset.</figcaption>
+</figure>
+
+
+<figure>
+  <img src="../images/prompt_override_4.png" width="900">
+  <figcaption>Sample-specific weighting based on semantic gap.</figcaption>
+</figure>
+<!-- 
 We analyze shifts between datasets using the same model to understand and steer model behavior without changing its weights. This framework compares representations from two datasets $S^{(1)}$ and $S^{(2)}$, enabling model steering — guiding outputs toward desired outcomes by modifying internal features rather than model parameters.
 
 We perform **Coarse-grained** and **Fine-grained steering**. Coarse steering adjusts model outputs globally by computing a steering vector between average representations of a target set $\mathbf{B} = \{\mathbf{b}_1, \ldots, \mathbf{b}_N\}$ and an original set $\mathbf{A} = \{\mathbf{a}_1, \ldots, \mathbf{a}_M\}$ at layer $l$:
@@ -122,4 +138,4 @@ Relevant steering vectors are identified through proximity matching or by their 
 
 ### Our Key Insight ✨
 
-We can efficiently steer an MLLM’s behavior at different levels of granularity without any fine-tuning. This includes broad adjustments that change the overall distribution of answers, as well as precise modifications that target specific responses. We explore these capabilities across a variety of tasks and datasets (*see examples of caption steering in the figure below*). -->
+We can efficiently steer an MLLM’s behavior at different levels of granularity without any fine-tuning. This includes broad adjustments that change the overall distribution of answers, as well as precise modifications that target specific responses. We explore these capabilities across a variety of tasks and datasets (*see examples of caption steering in the figure below*). --> -->
