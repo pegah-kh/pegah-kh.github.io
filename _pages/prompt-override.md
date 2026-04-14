@@ -55,11 +55,11 @@ Despite impressive progress in capabilities of large vision-language models (LVL
 
 ## Vision–language hallucination failure modes 
 
-![Codebook Image](../images/prompt_override_1.png){: width="600" }
+![Codebook Image](../images/prompt_override_1.png){: width="900" }
 
 As visual backbones improve, hallucinations increasingly arise from *conflicts between language priors and visual information*, rather than from perceptual limitations alone. However, existing evaluation benchmarks including POPE, CHAIR, SHR, and MMHAL-Bench do not distinguish between hallucinations originating from perception failures, learned object co-occurrence priors, or presuppositions introduced by the instruction itself.
 
-We introduce **HalluScope** <img src="../images/prompt_override_2.png" alt="HalluScope Logo" style="display:inline; vertical-align:middle; height:40px; margin-left:6px;"> — a benchmark designed to disentangle distinct causes of hallucination: perception failures, learned object co-occurrence priors, and presuppositions introduced by the instruction. Using HalluScope, we show that hallucinations in modern LVLMs predominantly arise from over-reliance on textual instruction presuppositions and learned semantic priors rather than limitations of visual perception, revealing a shift in failure modes as visual backbones improve.
+We introduce **HalluScope** <img src="/images/prompt_override_2.png" alt="HalluScope Logo" style="display:inline; vertical-align:middle; height:40px; margin-left:6px;"> — a benchmark designed to disentangle distinct causes of hallucination: perception failures, learned object co-occurrence priors, and presuppositions introduced by the instruction. Using HalluScope, we show that hallucinations in modern LVLMs predominantly arise from over-reliance on textual instruction presuppositions and learned semantic priors rather than limitations of visual perception, revealing a shift in failure modes as visual backbones improve.
 
 Each image in our benchmark is paired with three targeted questions. Our construction pipeline proceeds as follows:
 
@@ -68,7 +68,7 @@ Each image in our benchmark is paired with three targeted questions. Our constru
 3. An object co-occurrence graph is built to identify context-aware adversarial objects
 4. Three questions are generated per image, probing visual perception, reliance on learned co-occurrence patterns, and sensitivity to presuppositions in the textual instruction
 
-![Benchmark overview](../images/prompt_override_3.png){: width="600" }
+![Benchmark overview](../images/prompt_override_3.png){: width="900" }
 
 
 
