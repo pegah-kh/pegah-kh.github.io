@@ -1,5 +1,5 @@
 ---
-title: "When Prompts Override Vision: Prompt-Induced Hallucinations in LVLMs <img src="/images/prompt_override_2.png" alt="HalluScope Logo" style="display:inline; vertical-align:middle; height:80px; margin-left:6px;">"
+title: "When Prompts Override Vision: Prompt-Induced Hallucinations in LVLMs "
 subtitle: ""
 layout: project
 permalink: /projects/prompts-override-vision/
