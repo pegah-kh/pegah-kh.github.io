@@ -125,7 +125,7 @@ To mitigate hallucinations, particularly those driven by over-reliance on textua
 *Sample-specific weighting based on semantic gap.*
 
 We are able to reduce hallucinations when a wrong assumption is made about the existence of a non-existent object in the image (adversarial presupposition subset of HalluScope), while also improving or staying competitive on other multimodal benchmarks.
-![Benchmark overview](../images/prompt_override_8.png){: width="900" }
+![Benchmark overview](../images/prompt_override_8.png){: width="600" }
 ![Benchmark overview](../images/prompt_override_9.png){: width="900" }
 
 
