@@ -39,11 +39,9 @@ affiliation: ISIR, Sorbonne Université, France
 
 Despite impressive progress in capabilities of large vision-language models (LVLMs), these systems remain vulnerable to hallucinations, i.e., outputs that are not grounded in the visual input. Prior work has attributed hallucinations in LVLMs to factors such as limitations of the vision backbone or the dominance of the language component, yet the relative importance of these factors remains unclear. To resolve this ambiguity, We propose **HalluScope**, a benchmark to better understand the extent to which different factors induce hallucinations. Our analysis indicates that hallucinations largely stem from excessive reliance on textual priors and background knowledge, especially information introduced through textual instructions. To mitigate hallucinations induced by textual instruction priors, we propose **HalluVL-DPO**, a framework for fine-tuning off-the-shelf LVLMs towards more visually grounded responses. HalluVL-DPO leverages preference optimization using a curated training dataset that we construct, guiding the model to prefer grounded responses over hallucinated ones. We demonstrate that our optimized model effectively mitigates the targeted hallucination failure mode, while preserving or improving performance on other hallucination benchmarks and visual capability evaluations.  -->
 
-<div align="center">
 
-## Abstract
+<h2 align="center">Abstract</h2>
 
-</div>
 
 Large vision-language models (LVLMs) are powerful, but they still *hallucinate*. What causes this? We introduce **HalluScope**, a benchmark to systematically study the factors behind hallucinations in LVLMs. Our findings reveal that the main culprit is over-reliance on textual priors, especially information embedded in text instructions, rather than weaknesses in the vision backbone.
 
@@ -51,11 +49,7 @@ To tackle this, we propose **HalluVL-DPO**, a fine-tuning framework that steers 
 
 ---
 
-<div align="center">
-
-## Vision–language hallucination failure modes
-
-</div>
+<h2 align="center">Vision–language hallucination failure modes</h2>
 
 
 ![Codebook Image](../images/prompt_override_1.png){: width="900" }
@@ -118,11 +112,7 @@ We evaluated several MLLMs on our benchmark.
 ---
 
 
-<div align="center">
-
-## Mitigating hallucinations with HalluVL-DPO
-
-</div>
+<h2 align="center">Mitigating hallucinations with HalluVL-DPO</h2>
 
 To mitigate hallucinations, particularly those driven by over-reliance on textual instruction presuppositions, we propose **HalluVL-DPO**, a fine-tuning framework based on a sample-informativeness weighted variant of Direct Preference Optimization (DPO). We construct a dedicated training dataset where each sample is paired with a **preferred** (visually grounded) response and a **rejected** (hallucinated) one, providing explicit supervision to steer the model toward more grounded outputs.
 
