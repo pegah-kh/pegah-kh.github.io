@@ -157,7 +157,7 @@ redirect_from:
   
   <div class="proj-card">
     <div class="proj-img">
-      <img src="../images/regents.png" alt="ReGentS scenario generation diagram">
+      <img src="../images/ReGentS.png" alt="ReGentS scenario generation diagram">
     </div>
     <div class="proj-body">
       <p class="proj-title">ReGentS: Real-World Safety-Critical Driving Scenario Generation Made Stable</p>
@@ -176,8 +176,7 @@ redirect_from:
     </div>
     <div class="proj-body">
       <p class="proj-title">Adversarial Corner Case Generation for Motion Planning</p>
-      <p class="proj-authors">Pegah Khayatan, et al.</p>
-      <p class="proj-desc">A framework to stress-test vehicle planners by generating safety-critical driving scenarios using the nuPlan simulator, exposing potential collision risks. Adapted from Han et al. 2022 to support a wider range of agents and behaviors.</p>
+      <p class="proj-desc">A framework to stress-test vehicle planners by generating safety-critical driving scenarios using the nuPlan simulator, exposing potential collision risks. </p>
       <div class="proj-links">
         <a class="proj-btn" href="https://github.com/pegah-kh/kinematic_adversary_agents/blob/main/report.pdf" target="_blank">Report</a>
         <a class="proj-btn" href="https://github.com/pegah-kh/kinematic_adversary_agents" target="_blank">Code</a>
