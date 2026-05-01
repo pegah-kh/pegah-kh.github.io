@@ -144,6 +144,21 @@ redirect_from:
       </div>
     </div>
   </div>
+  
+  <div class="proj-card">
+    <div class="proj-img">
+      <img src="../images/regents.png" alt="ReGentS scenario generation diagram">
+    </div>
+    <div class="proj-body">
+      <p class="proj-title">ReGentS: Real-World Safety-Critical Driving Scenario Generation Made Stable</p>
+      <p class="proj-authors">Yuan Yin, Pegah Khayatan, Éloi Zablocki, Alexandre Boulch, Matthieu Cord · ECCV Workshop 2024</p>
+      <p class="proj-desc">A framework for generating safety-critical driving scenarios by modifying real-world regular scenarios through trajectory optimization. ReGentS stabilizes generated trajectories and introduces heuristics to avoid unrealistic diverging paths and unavoidable collisions, scaling to up to 32 agents via a differentiable simulator.</p>
+      <div class="proj-links">
+        <a class="proj-btn" href="https://arxiv.org/abs/2409.07830" target="_blank">Paper</a>
+        <a class="proj-btn" href="https://github.com/valeoai/ReGentS" target="_blank">Code</a>
+      </div>
+    </div>
+  </div>
 
   <div class="proj-card">
     <div class="proj-img">
