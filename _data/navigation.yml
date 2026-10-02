@@ -7,5 +7,5 @@ main:
   - title: "Projects"
     url: /projects/
 
-  - title: "CP"
-    url: /competitiveprogramming/
+  # - title: "CP"
+  #   url: /competitiveprogramming/
