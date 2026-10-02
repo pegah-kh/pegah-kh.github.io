@@ -127,6 +127,37 @@ redirect_from:
 
   <div class="proj-card">
     <div class="proj-img">
+      <img src="../images/prompt_override_1.png" alt="Prompt-induced hallucination failure modes" style="object-fit: contain; background: #fff;">
+    </div>
+    <div class="proj-body">
+      <p class="proj-title">When Prompts Override Vision: Prompt-Induced Hallucinations in LVLMs</p>
+      <p class="proj-authors">Pegah Khayatan, Jayneel Parekh, Arnaud Dapogny, Mustafa Shukor, Alasdair Newson, Matthieu Cord · NeurIPS 2026 · VLM4RWD Workshop @ NeurIPS 2026</p>
+      <p class="proj-desc">We introduce HalluScope, a benchmark that disentangles the causes of hallucination in LVLMs — perception failures, learned object co-occurrence priors, and presuppositions in the instruction — showing that hallucinations largely stem from over-reliance on textual priors. To mitigate them, we propose HalluVL-DPO, a preference-optimization framework that fine-tunes off-the-shelf LVLMs towards visually grounded responses while preserving general capabilities.</p>
+      <div class="proj-links">
+        <a class="proj-btn" href="https://arxiv.org/abs/2604.21911" target="_blank">Paper</a>
+        <a class="proj-btn" href="{{ base_path }}/projects/prompts-override-vision/">Project Page</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="proj-card">
+    <div class="proj-img">
+      <img src="../images/dimas_overview.png" alt="DiMaS method overview" style="object-fit: contain; background: #fff;">
+    </div>
+    <div class="proj-body">
+      <p class="proj-title">DiMaS: Distribution Matching for Steering Vision-Language-Action Models</p>
+      <p class="proj-authors">Pegah Khayatan*, Sara Meziane*, Jayneel Parekh*, Matthieu Cord · eXCV Workshop @ ECCV 2026</p>
+      <p class="proj-desc">We propose DiMaS, a distribution-matching steering strategy for flow-matching VLAs that transports between representation distributions rather than shifting along a fixed direction, enabling fine-grained behavioral control of robot policies such as SmolVLA and π0.5. Our analysis shows that behavioral features in the action expert are linearly decodable but not linearly steerable, explaining why classical steering falls short in VLAs.</p>
+      <div class="proj-links">
+        <a class="proj-btn" href="https://arxiv.org/abs/2607.14280" target="_blank">Paper</a>
+        <a class="proj-btn" href="https://github.com/pegah-kh/dimas" target="_blank">Code</a>
+        <a class="proj-btn" href="https://pegah-kh.github.io/dimas/" target="_blank">Project Page</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="proj-card">
+    <div class="proj-img">
       <img src="../images/analyze_shift.png" alt="Fine-tuning representation shift diagram">
     </div>
     <div class="proj-body">
@@ -190,7 +221,6 @@ redirect_from:
     </div>
     <div class="proj-body">
       <p class="proj-title">Simplified Velocity Skinning</p>
-      <p class="proj-authors">Pegah Khayatan</p>
       <p class="proj-desc">A course project making animations more realistic by adding exaggerated deformation triggered by skeletal velocity on top of standard skinning. Built using a CGP library and based on a simplification of the Velocity Skinning paper.</p>
       <div class="proj-links">
         <a class="proj-btn" href="https://github.com/pegah-kh/Simple-Velocity-Skinning" target="_blank">Code</a>
@@ -205,7 +235,6 @@ redirect_from:
     </div>
     <div class="proj-body">
       <p class="proj-title">Landmark Localization for a Fashion Dataset: A PIFPAF Plugin</p>
-      <p class="proj-authors">Pegah Khayatan</p>
       <p class="proj-desc">An OpenPifPaf plugin for detecting key landmarks — such as sleeve ends in shirts — across various clothing items in a fashion dataset.</p>
       <div class="proj-links">
         <a class="proj-btn" href="https://github.com/pegah-kh/pifpaf_deepfashion" target="_blank">Code</a>
