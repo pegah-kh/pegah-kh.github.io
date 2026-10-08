@@ -69,6 +69,15 @@
     .content {
       font-size: 1rem;
     }
+
+    .hero-image {
+      display: block;
+      width: 100%;
+      max-width: 520px;
+      height: auto;
+      margin: 0 auto 1.2em;
+      border-radius: 16px;
+    }
     .section img {
       display: block;
       max-width: 100%;
@@ -89,6 +98,10 @@
   <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
+
+  {% if page.hero_image %}
+    <img class="hero-image" src="{{ page.hero_image | relative_url }}" alt="{{ page.hero_alt | default: page.title }}">
+  {% endif %}
 
   <h1>{{ page.title }}</h1>
   {% if page.subtitle %}
