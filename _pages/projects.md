@@ -135,6 +135,7 @@ redirect_from:
       <p class="proj-desc">We introduce HalluScope, a benchmark that disentangles the causes of hallucination in LVLMs — perception failures, learned object co-occurrence priors, and presuppositions in the instruction — showing that hallucinations largely stem from over-reliance on textual priors. To mitigate them, we propose HalluVL-DPO, a preference-optimization framework that fine-tunes off-the-shelf LVLMs towards visually grounded responses while preserving general capabilities.</p>
       <div class="proj-links">
         <a class="proj-btn" href="https://arxiv.org/abs/2604.21911" target="_blank">Paper</a>
+        <a class="proj-btn" href="https://github.com/pegah-kh/HalluScope" target="_blank">Code</a>
         <a class="proj-btn" href="{{ base_path }}/projects/prompts-override-vision/">Project Page</a>
       </div>
     </div>

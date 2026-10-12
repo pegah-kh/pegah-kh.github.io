@@ -28,7 +28,7 @@ Publications
 ======
 <small>(* equal contribution)</small>
 
-* **P. Khayatan**, J. Parekh, A. Dapogny, M. Shukor, A. Newson, M. Cord. *When Prompts Override Vision: Prompt-Induced Hallucinations in LVLMs*. **NeurIPS 2026**; also at NeurIPS 2026 Workshops (VLM4RWD). [[paper]](https://arxiv.org/abs/2604.21911) [[project]]({{ base_path }}/projects/prompts-override-vision/)
+* **P. Khayatan**, J. Parekh, A. Dapogny, M. Shukor, A. Newson, M. Cord. *When Prompts Override Vision: Prompt-Induced Hallucinations in LVLMs*. **NeurIPS 2026**; also at NeurIPS 2026 Workshops (VLM4RWD). [[paper]](https://arxiv.org/abs/2604.21911) [[code]](https://github.com/pegah-kh/HalluScope) [[project]]({{ base_path }}/projects/prompts-override-vision/)
 * **P. Khayatan\***, S. Meziane\*, J. Parekh\*, M. Cord. *DiMaS: Distribution Matching for Steering Vision-Language-Action Models*. **ECCV 2026 Workshops** (eXCV). [[paper]](https://arxiv.org/abs/2607.14280) [[code]](https://github.com/pegah-kh/dimas) [[project]](https://pegah-kh.github.io/dimas/)
 * J. Parekh\*, **P. Khayatan\***, M. Shukor, A. Dapogny, A. Newson, M. Cord. *Learning to Steer: Input-dependent Steering for Multimodal LLMs*. **NeurIPS 2025**. [[paper]](https://arxiv.org/abs/2508.12815) [[code]](https://github.com/jayneelparekh/learn-to-steer)
 * **P. Khayatan\***, M. Shukor\*, J. Parekh\*, A. Dapogny, M. Cord. *Analyzing Finetuning Representation Shift for Multimodal LLMs Steering*. **ICCV 2025**. [[paper]](https://arxiv.org/abs/2501.03012) [[code]](https://github.com/mshukor/xl-vlms)

@@ -19,8 +19,6 @@ authors:
 affiliation: ISIR, Sorbonne Université, France
 hero_image: /images/halluscope_logo.png
 hero_alt: HalluScope logo
-# paper_url: https://arxiv.org/abs/2406.08074
-# code_url: https://github.com/mshukor/xl-vlms
 ---
 
 <style>
@@ -182,12 +180,10 @@ hero_alt: HalluScope logo
 
 <!-- ================= Links ================= -->
 <div class="po-links">
-  <!-- <a class="po-btn" href="https://arxiv.org/abs/XXXX.XXXXX">📄 Paper</a> -->
-  <a class="po-btn soon">💻 Code <small>coming soon</small></a>
-  <!-- TODO: replace href with the HalluScope HF dataset link and remove the "soon" class -->
-  <a class="po-btn scope soon" href="#">🤗 HalluScope <small>benchmark</small></a>
-  <!-- TODO: replace href with the HalluVL-DPO HF dataset link and remove the "soon" class -->
-  <a class="po-btn dpo soon" href="#">🤗 HalluVL-DPO <small>training data</small></a>
+  <a class="po-btn" href="https://arxiv.org/abs/2604.21911" target="_blank">📄 Paper</a>
+  <a class="po-btn" href="https://github.com/pegah-kh/HalluScope" target="_blank">💻 Code</a>
+  <a class="po-btn scope" href="https://huggingface.co/datasets/PekhPekhPekh/HalluScope" target="_blank">🤗 HalluScope <small>benchmark</small></a>
+  <a class="po-btn dpo" href="https://huggingface.co/datasets/PekhPekhPekh/HalluVL-DPO" target="_blank">🤗 HalluVL-DPO <small>training data</small></a>
 </div>
 
 <!-- ================= TL;DR ================= -->
@@ -317,8 +313,7 @@ hero_alt: HalluScope logo
 
 <div class="po-dataset">
   <p>🤗 <strong>HalluScope benchmark</strong> is available on Hugging Face.</p>
-  <!-- TODO: replace href with the HalluScope HF dataset link and remove the "soon" class -->
-  <a class="po-btn scope soon" href="#">Get the dataset <small>coming soon</small></a>
+  <a class="po-btn scope" href="https://huggingface.co/datasets/PekhPekhPekh/HalluScope" target="_blank">Get the dataset</a>
 </div>
 
 
@@ -351,8 +346,7 @@ hero_alt: HalluScope logo
 
 <div class="po-dataset dpo">
   <p>🤗 <strong>HalluVL-DPO training dataset</strong> is available on Hugging Face.</p>
-  <!-- TODO: replace href with the HalluVL-DPO HF dataset link and remove the "soon" class -->
-  <a class="po-btn dpo soon" href="#">Get the dataset <small>coming soon</small></a>
+  <a class="po-btn dpo" href="https://huggingface.co/datasets/PekhPekhPekh/HalluVL-DPO" target="_blank">Get the dataset</a>
 </div>
 
 <h3>📈 Results</h3>
